@@ -3,8 +3,8 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include "algo/bstree.h"
-#include "bstree_internal.h"
-#include "bstnode.h"
+#include "bstree_internal.h"  /*a pointer points to root node: bstree_int_t*/
+#include "bstnode.h"          /*tree node: node_int_t*/
 
 int node_data(node_int_t *node)
 {
@@ -32,7 +32,7 @@ bool algo_bstree_int_is_empty(bstree_int_t* self)
     return self->root == NULL;
 }
 
-static bool _algo_bstree_int_find(node_int_t *node, int value);
+static bool _algo_bstree_int_find(node_int_t *node, int value);   /*can't access this function outside this .c file*/
 
 bool algo_bstree_int_find(bstree_int_t *self, int value)
 {
@@ -41,7 +41,7 @@ bool algo_bstree_int_find(bstree_int_t *self, int value)
     return _algo_bstree_int_find(self->root, value);
 }
 
-bool _algo_bstree_int_find(node_int_t *node, int value)
+static bool _algo_bstree_int_find(node_int_t *node, int value)   /*find with preorder recursively*/
 {
     if (!node) {
         return false;
@@ -124,7 +124,7 @@ bool algo_bstree_int_delete(bstree_int_t *self, int value)
         return false;
     }
 
-    return _algo_bstree_int_delete(&(self->root), value);
+    return _algo_bstree_int_delete(&(self->root), value);      /* 0X22222 -> 0X11111 -> node_int_t */
 }
 
 
@@ -175,7 +175,7 @@ void algo_bstree_int_free(void *self)
     free(self);
 }
 
-static void _algo_bstree_int_free(void *node)
+static void _algo_bstree_int_free(void *node)    /* recursively delete all nodes by postorder*/
 {
     if (!node) {
         return;
