@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include "algo/bstree.h"     /* bstree_int_t define*/
-#include "bstree_internal.h" /* bstree_int_t decalre*/
+#include "bstree_internal.h" /* bstree_int_t declare*/
 #include "bstnode.h"         /* node_int_t*/
 #include "algo/bstiter.h"
 
