@@ -1,6 +1,8 @@
 #ifndef ALGO_BSTREE_H
 #define ALGO_BSTREE_H
 
+#include "../../src/bstree_internal.h"
+
 #ifndef __cplusplus
     #include <stdbool.h>
 #endif
@@ -8,8 +10,6 @@
 #ifdef __cplusplus
 extern "C" {
 #endif
-
-typedef struct bstree_int_t bstree_int_t;
 
 bstree_int_t * algo_bstree_int_new(void);
 bool algo_bstree_int_is_empty(bstree_int_t *self);
