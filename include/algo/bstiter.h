@@ -1,7 +1,7 @@
 #ifndef ALGO_BSTITER_H
 #define ALGO_BSTITER_H
 
-#include "bstree.h"
+#include "../../src/bstree_internal.h"
 
 #ifdef __cplusplus
 extern "C" {
