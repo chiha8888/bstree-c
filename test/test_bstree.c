@@ -2,7 +2,7 @@
 #include <stddef.h>
 #include <stdlib.h>
 #include <stdio.h>
-#include "algo/bstree.h"
+#include "../src/bstree.h"
 #include "test_manipulation.h"
 #include "test_traversal.h"
 
