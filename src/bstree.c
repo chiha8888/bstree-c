@@ -2,7 +2,7 @@
 #include <stdbool.h>
 #include <stdlib.h>
 #include <stdio.h>
-#include "algo/bstree.h"
+#include "../include/algo/bstree.h"
 #include "bstree_internal.h"  /*a pointer points to root node: bstree_int_t*/
 #include "bstnode.h"          /*tree node: node_int_t*/
 
